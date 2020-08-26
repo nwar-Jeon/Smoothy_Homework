@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.nwar.smoothy_homework.presenter.ui.fragment.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_detailImageFragment"
+            app:destination="@id/detailImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.nwar.smoothy_homework.presenter.ui.fragment.FavoriteFragment"
+        android:label="FavoriteFragment"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoriteFragment_to_detailImageFragment"
+            app:destination="@id/detailImageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailImageFragment"
+        android:name="com.nwar.smoothy_homework.presenter.ui.fragment.DetailImageFragment"
+        android:label="DetailImageFragment"
+        tools:layout="@layout/fragment_detail_image"/>
+</navigation>
